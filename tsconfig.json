@@ -7,7 +7,8 @@
     "esModuleInterop": true,                     /* 라이브러리 불러오기 호환성 설정 */
     "forceConsistentCasingInFileNames": true,   /* 파일명 대소문자 구분 강제 */
     "strict": true,                              /* 엄격한 타입 체킹 활성화 */
-    "skipLibCheck": true                         /* 라이브러리 타입 검사 건너뛰기 */
+    "skipLibCheck": true,                         /* 라이브러리 타입 검사 건너뛰기 */
+    "sourceMap": true
   },
   "include": ["backend/**/*", "frontend/ts"]                        /* backend와 frontend/ts  폴더 내 모든 파일을 포함 */
 }

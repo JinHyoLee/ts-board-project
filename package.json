@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/backend/index.js",
     "build": "tsc && vite build",
     "backend": "nodemon --watch backend/**/*.ts --exec ts-node backend/index.ts",
     "frontend": "vite",

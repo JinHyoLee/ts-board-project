@@ -1,11 +1,29 @@
 /* backend/frontend/ts/app.ts */
 
-// 1. 브라우저 HTML(onclick)에서 함수를 찾을 수 있도록 window 객체에 등록
-(window as any).showSection = showSection;
-(window as any).register = register;
-(window as any).login = login;
-(window as any).writePost = writePost;
-(window as any).logout = logout;
+const loginSubmitBtn = document.getElementById('login-submit-btn') as HTMLButtonElement | null;
+if (loginSubmitBtn) {
+  loginSubmitBtn.addEventListener('click', login);
+}
+
+const registerSubmitBtn = document.getElementById('register-submit-btn') as HTMLButtonElement | null;
+if (registerSubmitBtn) {
+  registerSubmitBtn.addEventListener('click', register);
+}
+
+const writePostBtn = document.getElementById('write-post-btn') as HTMLButtonElement | null;
+if (writePostBtn) {
+  writePostBtn.addEventListener('click', writePost);
+}
+
+const loginBtn = document.getElementById('login-btn') as HTMLButtonElement | null;
+if (loginBtn) {
+  loginBtn.addEventListener('click', () => showSection('login-section'));
+}
+
+const registerBtn = document.getElementById('register-btn') as HTMLButtonElement | null;
+if (registerBtn) {
+  registerBtn.addEventListener('click', () => showSection('register-section'));
+}
 
 // 매개변수에 : string 타입을 지정하여 'any' 에러를 해결합니다.
 function showSection(sectionId: string): void {
@@ -59,7 +77,11 @@ async function login(): Promise<void> {
     
     const navBar = document.getElementById('nav-bar');
     if (navBar) {
-      navBar.innerHTML = `<span>👋 반가워요!</span> <button onclick="logout()">로그아웃</button>`;
+      navBar.innerHTML = `<span>👋 반가워요!</span> <button id="logout-btn">로그아웃</button>`;
+      const logoutBtn = document.getElementById('logout-btn') as HTMLButtonElement | null;
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', logout);
+      }
     }
     
     showSection('board-section');
