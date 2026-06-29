@@ -1,0 +1,63 @@
+/* public/css/style.css */
+body { 
+  font-family: 'Malgun Gothic', sans-serif; 
+  background: #f5f6f7; 
+  padding: 20px; 
+}
+.container { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  background: white; 
+  padding: 30px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+.section { 
+  display: none; 
+  margin-bottom: 20px; 
+}
+.active { 
+  display: block; 
+}
+input, textarea { 
+  width: 100%; 
+  padding: 10px; 
+  margin: 5px 0 15px 0; 
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+}
+button { 
+  background: #4CAF50; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+button:hover { 
+  background: #45a049; 
+}
+.post-item { 
+  border-bottom: 1px solid #eee; 
+  padding: 15px 0; 
+}
+.post-title { 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #333; 
+}
+.post-meta { 
+  font-size: 12px; 
+  color: #888; 
+  margin-top: 5px; 
+}
+.nav { 
+  margin-bottom: 20px; 
+  text-align: right; 
+}
+.nav span { 
+  font-weight: bold; 
+  color: #0066cc; 
+  margin-right: 15px; 
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 TypeScript 풀스택 게시판</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="nav" id="nav-bar">
+    <button onclick="showSection('login-section')">로그인</button>
+    <button onclick="showSection('register-section')">회원가입</button>
+  </div>
+
+  <div id="register-section" class="section">
+    <h2>회원가입</h2>
+    <input type="text" id="reg-username" placeholder="아이디">
+    <input type="password" id="reg-password" placeholder="비밀번호">
+    <input type="text" id="reg-nickname" placeholder="닉네임">
+    <button onclick="register()">가입하기</button>
+  </div>
+
+  <div id="login-section" class="section active">
+    <h2>로그인</h2>
+    <input type="text" id="login-username" placeholder="아이디">
+    <input type="password" id="login-password" placeholder="비밀번호">
+    <button onclick="login()">로그인</button>
+  </div>
+
+  <div id="board-section" class="section">
+    <h2>📝 자유 게시판</h2>
+    <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 4px;">
+      <h4>새 글 작성하기</h4>
+      <input type="text" id="post-title" placeholder="글 제목">
+      <textarea id="post-content" rows="4" placeholder="내용을 입력하세요"></textarea>
+      <button onclick="writePost()">글 등록</button>
+    </div>
+    
+    <h4>글 목록</h4>
+    <div id="post-list"></div>
+  </div>
+</div>
+
+<script type="module" src="/js/app.ts"></script>
+</body>
+</html>
