@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                          /* 컴파일할 자바스크립트 버전 */
+    "module": "CommonJS",                        /* 모듈 시스템 선택 */
+    "rootDir": "./src",                          /* 소스 코드가 위치할 폴더 */
+    "outDir": "./dist",                          /* 컴파일된 파일이 저장될 폴더 */
+    "esModuleInterop": true,                     /* 라이브러리 불러오기 호환성 설정 */
+    "forceConsistentCasingInFileNames": true,   /* 파일명 대소문자 구분 강제 */
+    "strict": true,                              /* 엄격한 타입 체킹 활성화 */
+    "skipLibCheck": true                         /* 라이브러리 타입 검사 건너뛰기 */
+  },
+  "include": ["src/**/*"]                        /* src 폴더 내 모든 파일을 포함 */
+}
