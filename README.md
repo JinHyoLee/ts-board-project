@@ -1,5 +1,9 @@
 # 📝 TypeScript 기반 모던 풀스택 게시판
 
+Express + TypeScript + MySQL로 구현한 간단한 게시판 프로젝트입니다. 백엔드(Express)와 프론트엔드(Vite) 모두 **TypeScript**를 도입하여 안정성과 생산성을 높였습니다.
+
+---
+
 ## 🛠️ 기술 스택 (Tech Stack)
 
 | 구분 | 기술 요소 |
