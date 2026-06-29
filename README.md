@@ -10,6 +10,16 @@
 
 ---
 
+## ⚙️ 핵심 기능 (Features)
+
+| 기능 분류 | 상세 설명 |
+| :--- | :--- |
+| **회원 인증 (Auth)** | • JWT 토큰 인증 방식을 사용한 로그인 처리<br>• 프론트엔드 메모리 변수(`myToken`) 저장으로 보안 강화 |
+| **게시판 기능 (CRUD)** | • **Create**: JWT 인증을 통과한 유저만 새 글 작성 가능<br>• **Read**: 데이터베이스에 저장된 전체 글 목록 실시간 조회 및 출력 |
+| **환경 최적화** | • Vite Proxy 설정을 통한 CORS 에러 사전 차단<br>• 모듈 격리로 인한 인라인 이벤트 제한을 `window` 전역 바인딩으로 해결 |
+
+---
+
 ## 📂 프로젝트 구조 (Project Structure)
 
 | 폴더 / 파일 | 역할 및 설명 |
@@ -24,16 +34,6 @@
 | `├── routes/auth.ts` | 회원가입 및 로그인 처리 라우터 |
 | `├── routes/board.ts` | 게시글 목록 조회 및 작성 처리 라우터 |
 | `└── index.ts` | 백엔드 Express 서버 진입점 |
-
----
-
-## ⚙️ 핵심 기능 (Features)
-
-| 기능 분류 | 상세 설명 |
-| :--- | :--- |
-| **회원 인증 (Auth)** | • JWT 토큰 인증 방식을 사용한 로그인 처리<br>• 프론트엔드 메모리 변수(`myToken`) 저장으로 보안 강화 |
-| **게시판 기능 (CRUD)** | • **Create**: JWT 인증을 통과한 유저만 새 글 작성 가능<br>• **Read**: 데이터베이스에 저장된 전체 글 목록 실시간 조회 및 출력 |
-| **환경 최적화** | • Vite Proxy 설정을 통한 CORS 에러 사전 차단<br>• 모듈 격리로 인한 인라인 이벤트 제한을 `window` 전역 바인딩으로 해결 |
 
 ---
 
@@ -83,3 +83,13 @@
 ### 1. 의존성 패키지 설치
 ```bash
 npm install
+npm run dev:backend    # 터미널 1 (백엔드 Express 서버 오픈)
+npm run dev:frontend   # 터미널 2 (프론트엔드 Vite 컴파일러 오픈)
+```
+| 구분 | backend | frontend |
+| :--- | :--- | :--- |
+| 실행 명령 | npm run dev:backend | npm run dev:frontend |
+| 실행 동작 | tsx watch src/index.ts — 백엔드 코드 변경 시 즉시 재시작 | vite — 프론트엔드 HMR(핫 리로딩) 및 개발용 프록시 서버 오픈 |
+| 접속 주소 | http://localhost:3000 | http://localhost:5173 (이 주소로 접속) |
+
+## 실행예시
