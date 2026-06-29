@@ -92,6 +92,8 @@ npm run dev:frontend   # 터미널 2 (프론트엔드 Vite 컴파일러 오픈)
 | 실행 동작 | tsx watch src/index.ts — 백엔드 코드 변경 시 즉시 재시작 | vite — 프론트엔드 HMR(핫 리로딩) 및 개발용 프록시 서버 오픈 |
 | 접속 주소 | http://localhost:3000 | http://localhost:5173 (이 주소로 접속) |
 
+---
+
 ## 실행예시
 <img width="862" height="346" alt="image" src="https://github.com/user-attachments/assets/6804f9af-cd5a-4d3a-ac24-43d0dc0c39c5" />
 <img width="864" height="931" alt="image" src="https://github.com/user-attachments/assets/18f6c4df-ae95-4329-af0d-ca37157651e6" />
