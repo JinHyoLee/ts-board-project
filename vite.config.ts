@@ -4,9 +4,9 @@ import { resolve } from 'path';
 
 export default defineConfig({
   // 프론트엔드 소스 파일들이 모여있는 기준 폴더
-  root: 'public',
+  root: 'frontend',
   build: {
-    // 빌드된 결과물이 저장될 위치를 기존 Express의 public 폴더로 지정
+    // 빌드된 결과물이 저장될 위치를 기존 Express의 frontend 폴더로 지정
     outDir: '../dist-frontend', 
     emptyOutDir: true,
   },

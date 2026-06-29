@@ -1,4 +1,4 @@
-// src/middlewares/authMiddleware.ts
+// backend/middlewares/authMiddleware.ts
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 

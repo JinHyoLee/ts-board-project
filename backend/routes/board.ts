@@ -1,4 +1,4 @@
-// src/routes/board.ts
+// backend/routes/board.ts
 import { Router, Response } from 'express';
 import pool from '../config/db';
 import { authenticateToken, AuthRequest } from '../middlewares/authMiddleware';

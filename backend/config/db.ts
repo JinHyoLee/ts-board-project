@@ -1,4 +1,4 @@
-// src/config/db.ts
+// backend/config/db.ts
 import mysql from 'mysql2/promise'; // async/await 문법을 쓰기 위해 promise 버전을 가져옵니다.
 
 // 데이터베이스 연결 풀(Pool) 생성

@@ -1,4 +1,4 @@
-// src/index.ts
+// backend/index.ts
 import express, { Request, Response } from 'express';
 import pool from './config/db';
 import authRouter from './routes/auth'; // 1. 방금 만든 라우터 가져오기
@@ -11,7 +11,7 @@ app.use(express.json());
 
 // 2. 회원가입/로그인 관련 API는 '/api/auth' 경로로 시작하도록 설정
 app.use('/api/auth', authRouter);
-app.use(express.static('public')); // public 폴더 안의 파일들을 기본 웹서버 화면으로 제공하겠다는 뜻!
+app.use(express.static('frontend')); // frontend 폴더 안의 파일들을 기본 웹서버 화면으로 제공하겠다는 뜻!
 app.use('/api/board', boardRouter);
 
 app.get('/', (req: Request, res: Response) => {

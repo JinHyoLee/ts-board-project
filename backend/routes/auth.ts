@@ -1,4 +1,4 @@
-// src/routes/auth.ts
+// backend/routes/auth.ts
 import { Router, Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import pool from '../config/db';

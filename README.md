@@ -28,11 +28,11 @@ Express + TypeScript + MySQL로 구현한 간단한 게시판 프로젝트입니
 
 | 폴더 / 파일 | 역할 및 설명 |
 | :--- | :--- |
-| `public/` | 프론트엔드 빌드 기준 폴더 (Vite Root) |
+| `frontend/` | 프론트엔드 빌드 기준 폴더 (Vite Root) |
 | `├── css/style.css` | 애플리케이션 UI 스타일시트 |
 | `├── js/app.ts` | 프론트엔드 핵심 로직 및 API 비동기 통신 |
 | `└── index.html` | 메인 단일 페이지 (SPA 구조) |
-| `src/` | 백엔드 Express 소스 코드 |
+| `backend/` | 백엔드 Express 소스 코드 |
 | `├── config/db.ts` | MySQL Connection Pool 연결 설정 |
 | `├── middlewares/auth.ts` | JWT 토큰 검증 및 유저 인가 미들웨어 |
 | `├── routes/auth.ts` | 회원가입 및 로그인 처리 라우터 |
@@ -93,7 +93,7 @@ npm run dev:frontend   # 터미널 2 (프론트엔드 Vite 컴파일러 오픈)
 | 구분 | backend | frontend |
 | :--- | :--- | :--- |
 | 실행 명령 | npm run dev:backend | npm run dev:frontend |
-| 실행 동작 | tsx watch src/index.ts — 백엔드 코드 변경 시 즉시 재시작 | vite — 프론트엔드 HMR(핫 리로딩) 및 개발용 프록시 서버 오픈 |
+| 실행 동작 | tsx watch backend/index.ts — 백엔드 코드 변경 시 즉시 재시작 | vite — 프론트엔드 HMR(핫 리로딩) 및 개발용 프록시 서버 오픈 |
 | 접속 주소 | http://localhost:3000 | http://localhost:5173 (이 주소로 접속) |
 
 ---

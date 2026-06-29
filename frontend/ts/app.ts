@@ -1,4 +1,4 @@
-/* src/frontend/js/app.ts */
+/* backend/frontend/ts/app.ts */
 
 // 1. 브라우저 HTML(onclick)에서 함수를 찾을 수 있도록 window 객체에 등록
 (window as any).showSection = showSection;

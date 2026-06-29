@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc && vite build",
-    "backend": "nodemon --watch src/**/*.ts --exec ts-node src/index.ts",
+    "backend": "nodemon --watch backend/**/*.ts --exec ts-node backend/index.ts",
     "frontend": "vite",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
